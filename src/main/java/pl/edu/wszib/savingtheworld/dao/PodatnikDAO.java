@@ -9,10 +9,10 @@ import java.util.Optional;
 @Repository
 public interface PodatnikDAO extends CrudRepository<Podatnik, Long> {
 
-Optional<Podatnik>findByImie(String imie);
+    Optional<Podatnik> findByImie(String imie);
 
-List<Podatnik>findAllByFaktury(String nazwisko);
-List<Podatnik>findAll();
+    List<Podatnik> findAllByFaktury_Tytuł(String tytuł);
 
+    List<Podatnik> findAll();
 
 }

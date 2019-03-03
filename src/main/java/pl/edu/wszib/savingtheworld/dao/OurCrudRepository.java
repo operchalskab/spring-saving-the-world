@@ -1,15 +1,13 @@
 package pl.edu.wszib.savingtheworld.dao;
 
-
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface FakturyDAO extends CrudRepository<Faktury, Long> {
+public interface OurCrudRepository<T,ID> extends CrudRepository<T,ID> {
 
-    List<Faktury>findAll();
-
-    List<Faktury>findAllByPodatnik(Podatnik podatnik);
+    @Override
+    List<T> findAll();
 }

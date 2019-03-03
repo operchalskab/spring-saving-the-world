@@ -13,12 +13,16 @@ public class Podatnik {
     @GeneratedValue
     Long pesel;
     @Column(nullable = false)
-    String imie;
+    public String imie;
     @Column(nullable = false)
-    String nazwisko;
+    public String nazwisko;
 
-    @OneToMany
+    @OneToMany(mappedBy = "podatnik", fetch = FetchType.EAGER)
     List<Faktury> faktury;
+
+    public Podatnik(){
+
+    }
 
     public List<Faktury> getFaktury() {
         return faktury;
@@ -26,10 +30,6 @@ public class Podatnik {
 
     public void setFaktury(List<Faktury> faktury) {
         this.faktury = faktury;
-    }
-
-    public Podatnik(){
-
     }
 
     public Podatnik(String imie, String nazwisko) {
