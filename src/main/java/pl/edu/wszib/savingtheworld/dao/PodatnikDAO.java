@@ -1,5 +1,6 @@
 package pl.edu.wszib.savingtheworld.dao;
 
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -14,5 +15,6 @@ public interface PodatnikDAO extends CrudRepository<Podatnik, Long> {
     List<Podatnik> findAllByFaktury_Tytuł(String tytuł);
 
     List<Podatnik> findAll();
+
 
 }

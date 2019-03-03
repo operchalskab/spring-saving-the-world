@@ -1,3 +1,4 @@
+/*
 package pl.edu.wszib.savingtheworld.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,3 +54,4 @@ public class InitComponent {
 
     }
 }
+*/
