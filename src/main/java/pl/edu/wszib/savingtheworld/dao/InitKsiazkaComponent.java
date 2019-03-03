@@ -22,8 +22,8 @@ public class InitKsiazkaComponent {
     @Autowired
     KsiazkaKucharskaDAO ksiazkaKucharskaDAO;
 
-   // @PostConstruct
-   /* public void init(){
+    @PostConstruct
+    public void init() {
         for (int i = 0; i < 10; i++) {
             TypSkladnika typSkladnika = new TypSkladnika();
             typSkladnika.setNazwa("skladnik" + i);
@@ -42,15 +42,16 @@ public class InitKsiazkaComponent {
         przepis = przepisDAO.save(przepis);
 
         List<TypSkladnika> typSkladnikas = typSkladnikaDAO.findAll();
-        for(TypSkladnika typ : typSkladnikas){
+        for (TypSkladnika typ : typSkladnikas) {
             Skladnik skladnik = new Skladnik();
-            skladnik.setIlosc(new Random().nextInt(5) +1);
+            skladnik.setIlosc(new Random().nextInt(5) + 1);
             skladnik.setTypSkladnika(typ);
             skladnik.setPrzepis(przepis);
             skladnikDAO.save(skladnik);
         }
-        System.out.println("");*/
+        System.out.println("");
 
     }
+}
 
 

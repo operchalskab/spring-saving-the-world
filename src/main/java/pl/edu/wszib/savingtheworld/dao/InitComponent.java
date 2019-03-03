@@ -1,4 +1,3 @@
-/*
 package pl.edu.wszib.savingtheworld.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +32,7 @@ public class InitComponent {
             Podatnik podatnikSaved=podatnikDAO.save(podatnik);
 
 
-        IntStream.range(0,10).forEach(j->{
+        IntStream.range(0,1000).forEach(j->{
             Faktury faktury = new Faktury(3.5,"cos" + i);
             // faktury = fakturyDAO.save(faktury);
             faktury.setPodatnik(podatnikSaved);
@@ -54,4 +53,3 @@ public class InitComponent {
 
     }
 }
-*/
